@@ -14,7 +14,7 @@ RUN mkdir logstash-filter-de_dot
 
 ADD Gemfile Rakefile *.gemspec logstash-filter-de_dot/
 ADD ci logstash-filter-de_dot/ci/
-ADD lib logstash-filter-de_dot/ci/lib/
+ADD lib logstash-filter-de_dot/lib/
 ADD spec logstash-filter-de_dot/ci/spec/
 
 WORKDIR logstash-filter-de_dot
