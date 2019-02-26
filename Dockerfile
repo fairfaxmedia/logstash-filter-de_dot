@@ -12,12 +12,13 @@ RUN apk add --no-cache \
 
 RUN mkdir logstash-filter-de_dot
 
-ADD Gemfile Rakefile *.gemspec logstash-filter-de_dot/
-ADD ci logstash-filter-de_dot/ci/
-ADD lib logstash-filter-de_dot/lib/
-ADD spec logstash-filter-de_dot/ci/spec/
-
 WORKDIR logstash-filter-de_dot
+
+ADD Gemfile Rakefile CONTRIBUTORS LICENSE NOTICE.TXT *.gemspec *.md ./
+ADD ci ci/
+ADD lib lib/
+ADD spec spec/
+ADD docs docs/
 
 RUN source ./ci/setup.sh && \
     bundle update && \
